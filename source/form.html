@@ -18,7 +18,100 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="heading-all">Подбор программы</h1>
+      <h1 class="heading heading--all">Подбор программы</h1>
+      <form class="program-selection" action="https://echo.htmlacademy.ru/" method="post">
+        <label>
+          Имя:<sup>*</sup>
+          <input type="text" name="cat_name" placeholder="Барсик">
+        </label>
+        <label>
+          Вес (кг):<sup>*</sup>
+          <input type="text" name="weight" placeholder="7">
+        </label>
+        <label>
+          Возраст (лет):
+          <input type="text" name="age" placeholder="7">
+        </label>
+        <ul class="program-selection__radio program-type">
+          <li class="program-type__option">
+            <label>
+              <input class="visually-hidden" type="radio" name="program-type" value="slim-program" checked>
+              <span class="radio-switch"></span>
+              Похудение
+            </label>
+          </li>
+          <li class="program-type__option">
+            <label>
+              <input class="visually-hidden" type="radio" name="program-type" value="pro-program">
+              <span class="radio-switch"></span>
+              Набор массы
+            </label>
+          </li>
+          <li class="program-type__option">
+            <label>
+              <input class="visually-hidden" type="radio" name="program-type" value="need_advice">
+              <span class="radio-switch"></span>
+              Не знаю (нужен ваш совет)
+            </label>
+          </li>
+        </ul>
+        <fieldset>
+          <legend class="heading-greenline">Контактные данные (владельца кота)</legend>
+          <label>
+            e-mail:<sup>*</sup>
+            <input type="text" name="e-mail" placeholder="kuklachev@gmail.com">
+          </label>
+          <label>
+            Телефон:<sup>*</sup>
+            <input type="text" name="telephone" placeholder="8 (960) 900-60-90">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend class="heading-greenline">Комментарий</legend>
+          <textarea name="letter" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+        </fieldset>
+        <fieldset>
+          <legend class="heading-greenline">Дополнительно</legend>
+          <ul class="filter-checkbox">
+            <li class="filter-option">
+              <label>
+                <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+                <span class="checkbox-switch"></span>
+                Сахарозаменитель
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input class="visually-hidden" type="checkbox" name="water">
+                <span class="checkbox-switch"></span>
+                Питьевая вода
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input class="visually-hidden" type="checkbox" name="milk">
+                <span class="checkbox-switch"></span>
+                Молоко
+              </label>
+            </li>
+            <li class="filter-option">
+              <label>
+                <input class="visually-hidden" type="checkbox" name="vitamins">
+                <span class="checkbox-switch"></span>
+                Витамины
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button button--green" type="submit">Отправить заявку</button>
+        <strong class="program-selection__legend"><sup>*</sup> — Обязательные поля</strong>
+      </form>
+      <section class="cooperation">
+        <h2 class="heading heading--all"></h2>
+        <p class="cooperation__heading">приглашаем к сотрудничеству дилеров!</p>
+        <p class="cooperation__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3002879875057!2d30.322808731053662!3d59.9387697644546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575987002302!5m2!1sru!2sru" width="320" height="362" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </section>
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo-text" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" alt="Логотип компании Кэт энерджи" width="128" height="24"></a>
