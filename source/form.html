@@ -20,91 +20,60 @@
     <main class="page-main">
       <h1 class="heading heading--all">Подбор программы</h1>
       <form class="program-selection" action="https://echo.htmlacademy.ru/" method="post">
-        <label>
-          Имя:<sup>*</sup>
-          <input type="text" name="cat_name" placeholder="Барсик">
-        </label>
-        <label>
-          Вес (кг):<sup>*</sup>
-          <input type="text" name="weight" placeholder="7">
-        </label>
-        <label>
-          Возраст (лет):
-          <input type="text" name="age" placeholder="7">
-        </label>
-        <ul class="program-selection__radio program-type">
-          <li class="program-type__option">
-            <label>
-              <input class="visually-hidden" type="radio" name="program-type" value="slim-program" checked>
-              <span class="radio-switch"></span>
-              Похудение
-            </label>
+        <label class="program-selection__label" for="cat-name">Имя:<sup>*</sup></label>
+        <input class="program-selection__input-text" type="text" name="cat_name" id="cat-name" placeholder="Барсик">
+        <label class="program-selection__label" for="weight">Вес (кг):<sup>*</sup></label>
+        <input class="program-selection__input-text" type="text" name="weight" id="weight" placeholder="7">
+        <label class="program-selection__label" for="age">Возраст (лет):</label>
+        <input class="program-selection__input-text" type="text" name="age" id="age" placeholder="7">
+        <ul class="program-selection__list">
+          <li>
+            <input class="visually-hidden" type="radio" name="program-type" id="slim-program" value="slim-program" checked>
+            <label class="program-selection__label" for="slim-program">Похудение</label>
           </li>
-          <li class="program-type__option">
-            <label>
-              <input class="visually-hidden" type="radio" name="program-type" value="pro-program">
-              <span class="radio-switch"></span>
-              Набор массы
-            </label>
+          <li>
+            <input class="visually-hidden" type="radio" name="program-type" id="pro-program" value="pro-program">
+            <label class="program-selection__label" for="pro-program">Набор массы</label>
           </li>
-          <li class="program-type__option">
-            <label>
-              <input class="visually-hidden" type="radio" name="program-type" value="need_advice">
-              <span class="radio-switch"></span>
-              Не знаю (нужен ваш совет)
-            </label>
+          <li>
+            <input class="visually-hidden" type="radio" name="program-type" id="need-advice" value="need-advice">
+            <label class="program-selection__label" for="need-advice">Не знаю (нужен ваш совет)</label>
           </li>
         </ul>
         <fieldset>
-          <legend class="heading-greenline">Контактные данные (владельца кота)</legend>
-          <label>
-            e-mail:<sup>*</sup>
-            <input type="text" name="e-mail" placeholder="kuklachev@gmail.com">
-          </label>
-          <label>
-            Телефон:<sup>*</sup>
-            <input type="text" name="telephone" placeholder="8 (960) 900-60-90">
-          </label>
+          <legend class="heading heading--greenline">Контактные данные (владельца кота)</legend>
+          <label class="program-selection__label" for="e-mail">e-mail:<sup>*</sup></label>
+          <input class="program-selection__input-text" type="text" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com">
+          <label class="program-selection__label" for="telephone">Телефон:<sup>*</sup>
+          <input class="program-selection__input-text" type="text" name="telephone" id="telephone" placeholder="8 (960) 900-60-90">
         </fieldset>
         <fieldset>
-          <legend class="heading-greenline">Комментарий</legend>
-          <textarea name="letter" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <legend class="heading heading--greenline">Комментарий</legend>
+          <textarea class="program-selection__textarea" name="letter" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset>
-          <legend class="heading-greenline">Дополнительно</legend>
-          <ul class="filter-checkbox">
-            <li class="filter-option">
-              <label>
-                <input class="visually-hidden" type="checkbox" name="sweetener" checked>
-                <span class="checkbox-switch"></span>
-                Сахарозаменитель
-              </label>
+          <legend class="heading heading--greenline">Дополнительно</legend>
+          <ul class="program-selection__list">
+            <li>
+              <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+              <label class="program-selection__label" for="sweetener">Сахарозаменитель</label>
             </li>
-            <li class="filter-option">
-              <label>
-                <input class="visually-hidden" type="checkbox" name="water">
-                <span class="checkbox-switch"></span>
-                Питьевая вода
-              </label>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="water" id="water">
+              <label class="program-selection__label" for="water">Питьевая вода</label>
             </li>
-            <li class="filter-option">
-              <label>
-                <input class="visually-hidden" type="checkbox" name="milk">
-                <span class="checkbox-switch"></span>
-                Молоко
-              </label>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="milk" id="milk">
+              <label class="program-selection__label" for="milk">Молоко</label>
             </li>
-            <li class="filter-option">
-              <label>
-                <input class="visually-hidden" type="checkbox" name="vitamins">
-                <span class="checkbox-switch"></span>
-                Витамины
-              </label>
+            <li>
+              <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+              <label class="program-selection__label" for="vitamins">Витамины</label>
             </li>
           </ul>
         </fieldset>
         <button class="button button--green" type="submit">Отправить заявку</button>
-        <strong class="program-selection__legend"><sup>*</sup> — Обязательные поля</strong>
+        <strong class="program-selection__note"><sup>*</sup> — Обязательные поля</strong>
       </form>
       <section class="cooperation">
         <h2 class="heading heading--all"></h2>
@@ -129,7 +98,7 @@
         </ul>
       </div>
       <a class="page-footer__link-text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      <a class="page-footer__link-img" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" alt="Логотип HTML-Academy" width="27" height="34"></a>
+      <a class="page-footer__link-img" href="https://htmlacademy.ru/intensive/adaptive"><img src="https://via.placeholder.com/150x150" alt="Логотип HTML Academy" width="27" height="34"></a>
     </footer>
   </body>
 </html
