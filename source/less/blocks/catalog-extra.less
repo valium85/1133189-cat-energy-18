@@ -1,4 +1,32 @@
-/* .catalog-extra {}
-.catalog-extra__list {}
-.catalog-extra__item {}
- */
+.catalog-extra {
+  .container();
+}
+
+.catalog-extra__list {
+  .list-reset();
+}
+
+.catalog-extra__item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-extra__item {
+    padding: 0 39px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-extra__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-extra__item {
+    display: flex;
+    justify-content: space-between;
+    width: 895px;
+    padding: 0;
+  }
+}

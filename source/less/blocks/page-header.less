@@ -1,3 +1,38 @@
 .page-header {
   .container();
 }
+
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 58px;
+  }
+
+  .page-header__wrapper {
+    display: flex;
+    align-items: center;
+    width: 173px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header--index {
+    position: absolute;
+    top: 54px;
+    left: 50%;
+    margin-left: -610px;
+  }
+
+  .page-header__wrapper {
+    width: 202px;
+  }
+}

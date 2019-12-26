@@ -1,7 +1,16 @@
 .first-screen {
-  background-color: @green;
+  background-color: #ffffff;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.first-screen__wrapper {
+  min-height: 480px;
+  .container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .first-screen__slogan {
@@ -9,6 +18,46 @@
   color: #ffffff;
   text-transform: uppercase;
 }
+
 /*
 .first-screen__img {}
  */
+
+@media (min-width: @tablet-width) {
+  .first-screen {
+    background: #ffffff;
+  }
+
+  .first-screen__wrapper {
+    display: block;
+    box-sizing: border-box;
+    min-height: 830px;
+    padding-left: 90px;
+  }
+
+  .first-screen__slogan {
+    .text-style(20px; 20px);
+    color: #000000;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .first-screen {
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+
+  .first-screen__wrapper {
+    position: relative;
+    min-height: 696px;
+    padding-top: 220px;
+    padding-left: 80px;
+  }
+
+  .first-screen__img {
+    position: absolute;
+    top: 25%;
+    left: 45%;/*пока примерно*/
+  }
+}
