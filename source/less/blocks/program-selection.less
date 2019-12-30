@@ -1,16 +1,36 @@
 .program-selection {
+  .container();
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .program-selection__fill-note {
+  width: 230px;
   font-size: 14px;
 }
+
+.program-selection__fieldset {
+  border: none;
+  padding: 0;
+  outline: 1px solid yellow;
+}
+
+.program-selection__input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  width: 100%;
+}
 /*
-.program-selection__list {}
 .program-selection__label {}
-.program-selection__input-text {}
- */
+*/
+
+.program-selection__input-text {
+  height: 45px;
+  flex-grow: 1;
+}
+
 .program-selection__input-text::-webkit-input-placeholder {
   text-transform: uppercase;
   color: #444444;
@@ -21,13 +41,23 @@
   color: #444444;
 }
 
-
-.program-selection__fieldset {
-  border: none;
+.program-selection__list {
+  .list-reset;
+  padding-left: 45px;
+  outline: 1px solid tomato;
 }
-/*
-.program-selection__textarea {}
- */
+
+.program-selection__list--radio li,
+.program-selection__list--checkbox li {
+  height: 30px;
+}
+
+.program-selection__textarea {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .program-selection__textarea::-webkit-input-placeholder {
   text-transform: uppercase;
   color: #444444;
@@ -43,4 +73,63 @@
   line-height: 16px;
   font-weight: 400;
   text-transform: none;
+}
+
+@media (min-width: @tablet-width) {
+  .program-selection__fieldset {
+    padding: 0 42px;
+  }
+
+  .program-selection__list--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .program-selection__list--radio li,
+  .program-selection__list--checkbox li {
+    width: 284px;
+    height: 40px;
+  }
+
+  .program-selection__bottom-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-selection__main-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program-selection__main-wrapper fieldset {
+    width: 570px;
+  }
+
+  .program-selection__fieldset {
+    padding: 0;
+  }
+
+  .program-selection__list--checkbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .program-selection__list--radio li,
+  .program-selection__list--checkbox li {
+    width: 245px;
+  }
+
+
+  .program-selection__input-wrapper {
+    width: 570px;
+  }
+
+  .program-selection__bottom-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 42px;
+  }
 }

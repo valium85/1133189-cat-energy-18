@@ -8,4 +8,40 @@
 .product-extra__table {
   .arial();
   line-height: 14px;
+  width: 100%;
+}
+
+.product-extra .button {
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .product-extra__heading {
+    font-size: 20px;
+  }
+
+  .product-extra__table {
+    .text-style(16px; 20px);
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .product-extra__heading {
+    width: 245px;
+  }
+
+  .product-extra__table {
+    .text-style(16px; 20px);
+    width: 285px;
+    margin-right: 40px;
+    margin-left: 80px;
+  }
+
+
+  .product-extra .button {
+    width: 245px;
+    margin-left: auto;
+  }
 }

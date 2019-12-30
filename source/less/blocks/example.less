@@ -2,12 +2,30 @@
   background-color: @lightgray;
 }
 
-.example__description {
-  .arial();
+.example__wrapper {
+  .container();
 }
 
-/* .example__wrapper {}
-.example__feature {} */
+.example__description {
+  .arial();
+  padding-right: 10px;
+}
+
+.example__feature-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  outline: 1px solid yellow;
+}
+
+.example__feature {
+  min-width: 124px;
+  border: 1px solid #cdcdcd;
+}
+
+.example__feature:nth-of-type(2n) {
+  margin-left: auto;
+}
+
 .example__feature-name {
   .text-style(24px; 24px);
   text-transform: uppercase;
@@ -19,19 +37,115 @@
 }
 
 .example__total {
+  flex-grow: 1;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 
-/* .example__slider {}
-.example__image {}
+.example__slider {
+  outline: 1px solid orange;
+}
+
+/*.example__image {}
 .example__image--before {}
-.example__image--after {}
-.example__switch {}
- */
+*/
+.example__image--after {
+  display: none;
+}
+
+.example__switch {
+  display: flex;
+  justify-content: space-between;
+  width: 198px;
+  margin: 27px auto;
+}
+
 .example__condition {
   .text-style(16px; 20px);
   text-transform: uppercase;
 }
-/*
-.example__toggle {} */
+
+.example__toggle {
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__description {
+    .text-style(16px; 24px);
+  }
+
+  .example__feature {
+    margin: 0 42px 0 0;
+  }
+
+  .example__feature:nth-of-type(2n) {
+    margin-left: 0;
+  }
+
+  .example__feature-name {
+    .text-style(30px; 37px);
+  }
+
+  .example__feature-text {
+    .text-style(14px; 14px);
+  }
+
+  .example__total {
+    width: 174px;
+    flex-grow: 0;
+    margin-left: auto;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  .example__slider {
+    background-color: @lightgray;
+  }
+
+  .example__switch {
+    width: 570px;
+  }
+
+  .example__toggle {
+    background-color: #dcdcdc;
+    width: 428px;
+    height: 6px;
+    border: none;
+    border-radius: 2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background-color: @lightgray;
+  }
+
+  .example__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .example .heading {
+    width: 100%;
+  }
+
+  .example__feature-wrapper {
+    width: 425px;
+  }
+
+  .example__total {
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+  }
+}

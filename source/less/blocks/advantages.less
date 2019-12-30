@@ -1,11 +1,63 @@
-/* .advantages {}
-.advantages__list {}
-.advantages__item {}
-.advantages__item--useful {}
+.advantages {
+  .container();
+}
+
+.advantages__list {
+  .list-reset();
+}
+
+.advantages__item {
+  min-height: 60px;
+  padding-left: 80px;
+  outline: 1px solid yellow;
+}
+
+.advantages__numeration {
+  display: none;
+}
+
+/* .advantages__item--useful {}
 .advantages__item--simple {}
 .advantages__item--combine {}
 .advantages__item--fast-result {}
  */
 .advantages__description {
   .arial();
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    position: relative;
+
+    width: 324px;
+    min-height: 231px;
+    padding: 0;
+    margin-bottom: 90px;
+  }
+
+  .advantages__numeration {
+    display: block;
+    .text-style (281px; 232px);
+    color: @lightgray;
+    position: absolute;
+    top: -13px;
+    left: 122px;
+    z-index: -1;
+  }
+
+  .advantages__description {
+    .text-style(16px; 24px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages__item {
+    width: 245px;
+  }
 }

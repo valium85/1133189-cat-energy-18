@@ -7,9 +7,23 @@
   font-family: "Arial", sans-serif;
 }
 
-.container {
+.container() {
   box-sizing: border-box;
   width: 280px;
   margin: 0 auto;
   outline: 2px solid green;
+
+  @media (min-width: @tablet-width) {
+    width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+  }
+}
+
+.list-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
