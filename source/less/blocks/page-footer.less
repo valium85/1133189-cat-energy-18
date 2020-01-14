@@ -8,11 +8,18 @@
 
 .page-footer__logo-text {
   display: block;
+  box-sizing: border-box;
+  height: 94px;
+  padding-top: 39px;
   text-align: center;
-}
 
-.page-footer__social {
-  outline: 1px solid yellow;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__bottom-links {
@@ -25,6 +32,21 @@
   .text-style(16px; 16px);
   .arial();
   color: #444444;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__link-img {
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active path {
+    fill: #68b738;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -32,5 +54,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 150px;
+  }
+
+  .page-footer__bottom-links {
+    width: 162px;
   }
 }

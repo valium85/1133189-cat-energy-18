@@ -1,8 +1,31 @@
-/* .social {}
-.social__list {}
-.social__item {}
-.social__link {}
-.social__link--vkontakte {}
-.social__link--instagram {}
-.social__link--facebook {}
- */
+.social__list {
+  .list-reset();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 64px;
+  padding: 0 73px;
+
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.social__link {
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active path {
+    fill: #68b738;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    width: 128px;
+    padding: 0;
+    border: none;
+  }
+}
