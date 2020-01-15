@@ -26,27 +26,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
 
-.page-footer__link-text {
-  .text-style(16px; 16px);
-  .arial();
-  color: #444444;
+  &:hover path {
+    fill: #68b738;
+  }
 
   &:active {
     opacity: 0.3;
   }
 }
 
-.page-footer__link-img {
-  &:hover path {
-    fill: #68b738;
-  }
-
-  &:active path {
-    fill: #68b738;
-    opacity: 0.3;
-  }
+.page-footer__link-text {
+  .text-style(16px; 16px);
+  .arial();
+  color: #444444;
 }
 
 @media (min-width: @tablet-width) {

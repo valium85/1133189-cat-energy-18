@@ -84,6 +84,7 @@
 .example__condition {
   .text-style(16px; 20px);
   text-transform: uppercase;
+  border: none;
 }
 
 .example__toggle {
@@ -93,20 +94,20 @@
   height: 14px;
   border: 1px solid #cdcdcd;
   border-radius: 4px;
+}
 
-  &::after {
-    content: "";
+.example__range-button {
+  content: "";
 
-    position: absolute;
-    left: 5px;
-    top: 3px;
+  position: absolute;
+  left: 5px;
+  top: 3px;
 
-    width: 35px;
-    height: 6px;
+  width: 35px;
+  height: 6px;
 
-    background-color: @green;
-    border-radius: 2px;
-  }
+  background-color: @green;
+  border-radius: 2px;
 }
 
 @media (min-width: @tablet-width) {
@@ -192,27 +193,27 @@
     height: 6px;
     border: none;
     border-radius: 2px;
+  }
 
-    &::after {
-      left: 50%;
-      top: -13px;
+  .example__range-button {
+    left: 50%;
+    top: -13px;
 
-      box-sizing: border-box;
-      width: 33px;
-      height: 33px;
-      margin-left: -17px;
+    box-sizing: border-box;
+    width: 33px;
+    height: 33px;
+    margin-left: -17px;
 
-      background-color: @green;
-      border: 12px solid #ffffff;
-      box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
-      border-radius: 50%;
-    }
+    background-color: @green;
+    border: 12px solid #ffffff;
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
 
-    &:hover::after {
+    &:hover {
       box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px 0 rgba(0, 0, 0, 0.25);
     }
 
-    &:active::after {
+    &:active {
       box-shadow: 0 0 0 2px @green, 0 4px 5px 0 rgba(0, 0, 0, 0.3);
     }
   }
