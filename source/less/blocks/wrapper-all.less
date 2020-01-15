@@ -1,0 +1,35 @@
+.wrapper-all--flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 0;
+}
+
+.wrapper-all--noflex {
+  .container();
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper-all--noflex {
+    padding: 0 42px;
+  }
+
+  .wrapper-all--owners-data {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wrapper-all--flex {
+    padding: 0;
+  }
+
+  .wrapper-all--noflex {
+    padding: 0;
+  }
+
+  .wrapper-all--owners-data {
+    padding: 70px 0;
+  }
+}

@@ -8,17 +8,32 @@
 
 .page-footer__logo-text {
   display: block;
+  box-sizing: border-box;
+  height: 94px;
+  padding-top: 39px;
   text-align: center;
-}
 
-.page-footer__social {
-  outline: 1px solid yellow;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__bottom-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover path {
+    fill: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__link-text {
@@ -32,5 +47,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 150px;
+  }
+
+  .page-footer__bottom-links {
+    width: 162px;
   }
 }
