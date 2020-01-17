@@ -2,7 +2,7 @@
   background-color: @lightgray;
 }
 
-.example__wrapper {
+.example__wrapper--center {
   .container();
 }
 
@@ -65,13 +65,6 @@
   outline: 1px solid orange;
 }
 
-/*.example__image {}
-.example__image--before {}
-*/
-.example__image--after {
-  display: none;
-}
-
 .example__switch {
   display: flex;
   justify-content: space-between;
@@ -84,6 +77,7 @@
 .example__condition {
   .text-style(16px; 20px);
   text-transform: uppercase;
+  background: none;
   border: none;
 }
 
@@ -108,6 +102,17 @@
 
   background-color: @green;
   border-radius: 2px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .example__image {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .example__image--after {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -166,7 +171,43 @@
   }
 
   .example__slider {
-    background-color: @lightgray;
+    position: relative;
+    background-image: linear-gradient(to right, @lightgray 50%, #eaeaea 50%);
+  }
+
+  .example__slide {
+    height: 517px;
+  }
+
+  .example__slide--lower {
+    background-image: linear-gradient(#ffffff 32.68%, transparent 32.68%);
+  }
+
+  .example__slide--upper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -338px;
+    width: 332px;
+    overflow: hidden;
+    background-image: linear-gradient(#ffffff 32.68%, transparent 32.68%);
+
+    & img {
+      max-width: 677px;
+    }
+  }
+
+  .example__image--before {
+    /* margin-top: 18px; */
+    width: 677px;
+    height: 499px;
+  }
+
+  .example__image--after {
+    display: block;
+    margin: 0 auto;
+    width: 545px;
+    height: 517px;
   }
 
   .example__switch {
@@ -222,16 +263,19 @@
 @media (min-width: @desktop-width) {
   .example {
     background-color: @lightgray;
+    background-image: linear-gradient(#ffffff 169px, transparent 169px);
   }
 
-  .example__wrapper {
+  .example__wrapper--flex {
+    .container();
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
   }
 
   .example .heading {
     width: 100%;
+    background-color: #ffffff;
   }
 
   .example__feature-wrapper {
@@ -244,6 +288,19 @@
 
   .example__feature-text {
     background-color: @lightgray;
+  }
+
+
+  .example__slide--upper {
+    /* left: -46px; */
+  }
+
+  .example__image--before {
+    /* margin-top: 18px; */
+  }
+
+  .example__image--after {
+    margin: 0 auto;
   }
 
   .example__total {
