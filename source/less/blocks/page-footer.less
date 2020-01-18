@@ -22,13 +22,27 @@
   }
 }
 
+.page-footer__icon-vk,
+.page-footer__icon-insta,
+.page-footer__icon-fb {
+  fill: #666666;
+
+  &:hover {
+    fill: @green;
+  }
+}
+
+.page-footer__icon-academy {
+  fill: #666666;
+}
+
 .page-footer__bottom-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  &:hover path {
-    fill: #68b738;
+  &:hover .page-footer__icon-academy {
+    fill: @green;
   }
 
   &:active {
