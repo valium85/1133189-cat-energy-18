@@ -9,8 +9,8 @@
 .page-footer__logo-text {
   display: block;
   box-sizing: border-box;
-  height: 94px;
-  padding-top: 39px;
+  height: 90px;
+  padding-top: 36px;
   text-align: center;
 
   &:hover {
@@ -34,12 +34,14 @@
 
 .page-footer__icon-htmlacademy {
   fill: #666666;
+  margin-right: -7px;
 }
 
 .page-footer__bottom-links {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 78px;
 
   &:hover .page-footer__icon-htmlacademy {
     fill: @green;
@@ -60,11 +62,38 @@
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     height: 150px;
+    padding-top: 52px;
+  }
+
+  .page-footer__logo-text {
+    display: block;
+    box-sizing: border-box;
+    height: 24px;
+    padding-top: 0;
+    text-align: center;
+    margin-top: 7px;
+  }
+
+
+  .page-footer__icon-vk {
+    width: 30px;
+    height: 16px;
+  }
+
+  .page-footer__icon-insta {
+    width: 23px;
+    height: 23px;
+  }
+
+  .page-footer__icon-fb {
+    width: 14px;
+    height: 28px;
   }
 
   .page-footer__bottom-links {
     width: 162px;
+    height: 34px;
   }
 }

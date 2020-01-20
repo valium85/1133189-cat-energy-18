@@ -20,7 +20,7 @@
       </a>
       <nav class="main-nav main-nav--opened">
         <div class="main-nav__toggle-wrapper">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <button class="main-nav__toggle main-nav__toggle--nojs" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <ul class="main-nav__list">
           <li><a href="index.html">Главная</a></li>
@@ -123,6 +123,16 @@
           <button class="button button--green button--submit" type="submit">Отправить заявку</button>
           <strong class="program-selection__note"><sup>*</sup> — Обязательные поля</strong>
         </div>
+        <!-- Класс для ошибки формы
+
+        .program-selection__input-text--error {
+          border-color: #ff8282;
+
+          & + .program-selection__mail-icon,
+          & + .program-selection__phone-icon {
+            fill: #ff8282;
+          }
+        } -->
       </form>
       <section class="cooperation cooperation--gray">
         <div class="cooperation__wrapper">
@@ -159,7 +169,7 @@
             <li class="social__item">
               <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg class="page-footer__icon-fb" width="16" height="16">
+                <svg class="page-footer__icon-fb" width="10" height="19">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
               </a>
@@ -168,7 +178,7 @@
         </div>
         <a class="page-footer__bottom-links" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="page-footer__link-text">HTML Academy</span>
-          <svg class="page-footer__icon-academy" width="27" height="34">
+          <svg class="page-footer__icon-academy" width="41" height="auto">
             <use xlink:href="#icon-academy"></use>
           </svg>
         </a>

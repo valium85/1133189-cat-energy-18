@@ -9,8 +9,8 @@
   min-height: 266px;
   padding-left: 20px;
   padding-right: 25px;
-  padding-top: 12px;
-  margin-bottom: 20px;
+  padding-top: 7px;
+  margin-bottom: 17px;
 }
 
 .categories__heading {
@@ -18,6 +18,7 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-left: 71px;
+  margin-bottom: 29px;
   position: relative;
 
   &::before {
@@ -67,7 +68,7 @@
   box-sizing: border-box;
   min-height: 108px;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
   border-bottom: 1px solid #d9d9d9;
 }
 
@@ -76,7 +77,7 @@
   display: flex;
   align-items: center;
   box-sizing: border-box;
-  height: 59px;
+  height: 57px;
 
   .text-style (16px; 16px);
   text-transform: uppercase;
@@ -105,20 +106,25 @@
 }
 
 @media (min-width: @tablet-width) {
+  .categories {
+    margin-bottom: 46px;
+  }
+
   .categories__section {
     min-height: 372px;
-    padding-top: 82px;
+    margin-bottom: 27px;
+    padding-top: 75px;
     padding-left: 54px;
   }
 
   .categories__heading {
     font-size: 36px;
-    margin: 0;
+    margin: 0 0 6px;
 
     &::before {
       left: auto;
       right: 37px;
-      top: -5px;
+      top: 15px;
 
       width: 200px;
       height: 200px;
@@ -127,7 +133,7 @@
 
   .categories__section--slim .categories__heading::after {
     left: 422px;
-    top: -17px;
+    top: 3px;
 
     width: 140px;
     height: 194px;
@@ -135,7 +141,7 @@
 
   .categories__section--pro .categories__heading::after {
     left: 358px;
-    top: 40px;
+    top: 60px;
 
     width: 268px;
     height: 112px;
@@ -146,7 +152,11 @@
     .text-style (16px; 24px);
     width: 373px;
     border: none;
-    padding: 20px 0 50px;
+    padding: 20px 0 35px;
+  }
+
+  .categories__description--pro {
+    width: 343px;
   }
 
   .categories__link {
@@ -171,15 +181,16 @@
 
   .categories__section {
     width: 570px;
+    padding-left: 52px;
   }
 
   .categories__heading {
     font-size: 36px;
-    margin-left: 215px;
-    margin-bottom: 80px;
+    margin-left: 163px;
+    margin-bottom: 55px;
 
     &::before {
-      left: -215px;
+      left: -163px;
       right: auto;
       top: -29px;
 
@@ -189,15 +200,15 @@
   }
 
   .categories__section--slim .categories__heading::after {
-    left: -207px;
-    top: -39px;
+    left: -148px;
+    top: -34px;
 
     width: 70px;
     height: 97px;
   }
 
   .categories__section--pro .categories__heading::after {
-    left: -232px;
+    left: -181px;
     top: -5px;
 
     width: 134px;
@@ -207,9 +218,10 @@
   .categories__description {
     width: 464px;
     min-height: 70px;
+    padding-bottom: 12px;
   }
 
   .categories__link {
-    margin-bottom: 50px;
+    margin-bottom: 42px;
   }
 }
