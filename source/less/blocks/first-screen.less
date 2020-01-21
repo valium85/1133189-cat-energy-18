@@ -66,13 +66,14 @@
 @media (min-width: @desktop-width) {
   .first-screen {
     margin: 0 auto 80px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-position: top right;
+    background:
+      url("../img/index-background-desktop@1x.jpg") no-repeat bottom right/ 50% auto,
+      linear-gradient(to right, transparent 50%, #64a83b 50%) no-repeat bottom right/ auto;
 
     @media (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+      background:
+        url("../img/index-background-desktop@2x.jpg") no-repeat bottom right/ 50% auto,
+        linear-gradient(to right, transparent 50%, #64a83b 50%) no-repeat bottom right/ auto;
     }
   }
 
