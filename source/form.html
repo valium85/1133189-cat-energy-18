@@ -32,9 +32,9 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="heading heading--all heading--h1">Подбор программы</h1>
+      <h1 class="heading heading--all heading--h1 heading--form">Подбор программы</h1>
       <form class="program-selection" action="https://echo.htmlacademy.ru/" method="post">
-        <div class="program-selection__main-wrapper">
+        <div class="wrapper-all wrapper-all--fill-note">
           <p class="program-selection__fill-note">Заполните анкету и мы подберем программу питания для вашего кота</p>
         </div>
         <div class="program-selection__main-wrapper">
@@ -42,11 +42,11 @@
             <div class="wrapper-all wrapper-all--flex">
               <div class="program-selection__input-wrapper">
                 <label class="program-selection__label" for="cat-name">Имя:<sup>*</sup></label>
-                <input class="program-selection__input-text" type="text" name="cat_name" id="cat-name" placeholder="Барсик">
+                <input class="program-selection__input-text" type="text" name="cat_name" id="cat-name" placeholder="Барсик" required>
               </div>
               <div class="program-selection__input-wrapper">
                 <label class="program-selection__label" for="weight">Вес (кг):<sup>*</sup></label>
-                <input class="program-selection__input-text" type="text" name="weight" id="weight" placeholder="7">
+                <input class="program-selection__input-text" type="text" name="weight" id="weight" placeholder="7" title="Число, максимум - 2 знака" required pattern="[0-9]{1,2}">
               </div>
               <div class="program-selection__input-wrapper">
                 <label class="program-selection__label" for="age">Возраст (лет):</label>
@@ -78,12 +78,12 @@
           <div class="wrapper-all wrapper-all--flex wrapper-all--noflex wrapper-all--owners-data">
             <div class="program-selection__input-wrapper">
               <label class="program-selection__label" for="e-mail">e-mail:<sup>*</sup></label>
-              <input class="program-selection__input-text" type="text" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com">
+              <input class="program-selection__input-text" type="email" name="e-mail" id="e-mail" placeholder="kuklachev@gmail.com" required>
               <svg class="program-selection__mail-icon" width="17" height="13"><use xlink:href="#icon-mail"></use></svg>
             </div>
             <div class="program-selection__input-wrapper">
               <label class="program-selection__label" for="telephone">Телефон:<sup>*</sup></label>
-              <input class="program-selection__input-text" type="text" name="telephone" id="telephone" placeholder="8 (960) 900-60-90">
+              <input class="program-selection__input-text" type="tel" name="telephone" id="telephone" title="Введите 10 цифр телефона без скобок, пробелов и 8" placeholder="8 (960) 900-60-90" required pattern="[0-9]{10}">
               <svg class="program-selection__phone-icon" width="20" height="20"><use xlink:href="#icon-phone"></use></svg>
             </div>
           </div>
@@ -92,7 +92,7 @@
           <div class="heading__wrapper heading__wrapper--green">
             <h2 class="heading heading--greenline">Комментарий</h2>
           </div>
-          <div class="wrapper-all wrapper-all--noflex">
+          <div class="wrapper-all wrapper-all--noflex ">
             <textarea class="program-selection__textarea" name="letter" cols="30" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
@@ -139,8 +139,11 @@
       <section class="cooperation cooperation--gray">
         <div class="cooperation__wrapper">
           <h2 class="visually-hidden">Сотрудничество с нами</h2>
-          <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
-          <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="cooperation__text">приглашаем<br> к сотрудничеству дилеров!</p>
+          <div class="cooperation__address">
+            <p>ул. Большая Конюшенная, д. 19/8</p>
+            <p>Санкт-Петербург</p>
+          </div>
         </div>
         <div class="cooperation__map-wrapper">
           <iframe class="cooperation__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3002879875057!2d30.322808731053662!3d59.9387697644546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1575987002302!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen=""></iframe>
@@ -180,8 +183,8 @@
         </div>
         <a class="page-footer__bottom-links" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="page-footer__link-text">HTML Academy</span>
-          <svg class="page-footer__icon-academy" width="41" height="auto">
-            <use xlink:href="#icon-academy"></use>
+          <svg class="page-footer__icon-htmlacademy" width="41" height="auto">
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>

@@ -18,10 +18,19 @@
 @media (max-width: @mobile-width-only) {
   .show-more {
     min-height: 210px;
-    padding: 80px 6.25% 24px;
+    padding: 63px 6.25% 24px;
     border: 1px solid #e6e6e6;
     background: url("../img/icon-plus-mobile.svg") center 27px no-repeat;
     background-size: 30px 30px;
+  }
+
+  .show-more__heading {
+    margin-bottom: 8px;
+  }
+
+  .show-more__description {
+    margin-top: 0;
+    margin-bottom: 21px;
   }
 }
 
@@ -29,24 +38,30 @@
   .show-more {
     width: 324px;
     min-height: 431px;
-    padding: 165px 38px 40px;
+    margin-top: 140px;
+    padding: 163px 38px 40px;
     border: 1px solid #e6e6e6;
-    background: url("../img/icon-plus.svg") center 27px no-repeat;
+    background: url("../img/icon-plus.svg") center 54px no-repeat;
     background-size: 60px 60px;
   }
 
   .show-more__heading {
+    width: 140px;
+    margin: 0 auto 27px;
     font-size: 20px;
+    text-align: center;
   }
 
   .show-more__description {
+    width: 170px;
+    margin: 10px auto 89px;
     font-size: 16px;
-    margin-bottom: 70px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .show-more {
     width: 245px;
+    margin-top: 142px;
   }
 }
