@@ -13,7 +13,6 @@
   border: none;
   padding: 22px 0;
   margin: 0;
-  /* outline: 1px solid yellow; */
 }
 
 .program-selection__fieldset--greenline {
@@ -93,7 +92,7 @@
 
 .program-selection__list {
   .list-reset;
-  padding: 15px 0 19px 45px;
+  padding: 20px 0 20px 45px;
 }
 
 .program-selection__list--radio li,
@@ -102,11 +101,6 @@
   box-sizing: border-box;
   height: 30px;
   padding-top: 7px;
-}
-
-.program-selection__list--radio li:not(:last-child),
-.program-selection__list--checkbox li:not(:last-child) {
-  margin-bottom: 13px;
 }
 
 .program-selection__radio-input,
@@ -161,7 +155,6 @@
   width: 100%;
   min-height: 150px;
   padding: 11px 12px 11px 15px;
-  margin: 36px 0;
   border: 1px solid #e6e6e6;
 
   &:hover {
@@ -184,7 +177,7 @@
 }
 
 .program-selection__bottom-wrapper {
-  padding: 16px 6.25% 27px;
+  padding: 11px 6.25% 32px;
 }
 
 .program-selection__note {
@@ -198,6 +191,7 @@
 @media (max-width: @mobile-width-only) {
   .program-selection__fill-note {
     padding: 0 6.25%;
+    margin-bottom: 16px;
   }
 
   .program-selection__fieldset {
@@ -213,6 +207,25 @@
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
   }
+
+  .program-selection__list--radio li:not(:last-child),
+  .program-selection__list--checkbox li:not(:last-child) {
+    margin-bottom: 13px;
+  }
+
+  .program-selection__textarea {
+    margin: 15px 0 40px;
+  }
+
+  .program-selection__list--checkbox {
+    margin-top: -3px;
+  }
+
+  .program-selection__note {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -220,7 +233,6 @@
     font-size: 20px;
     line-height: 20px;
   }
-
 
   .program-selection__main-wrapper {
     .container();
@@ -230,11 +242,19 @@
     font-size: 20px;
     line-height: 30px;
     width: 345px;
-    padding: 45px 41px 38px;
+    padding: 36px 41px 19px;
+  }
+
+  .program-selection__input-wrapper {
+    padding: 10px 0;
   }
 
   .program-selection__fieldset {
     padding: 0 42px;
+  }
+
+  .program-selection__list--radio li:not(:last-child) {
+    margin-bottom: 13px;
   }
 
   .program-selection__fieldset--greenline {
@@ -263,13 +283,17 @@
 
   .program-selection__list--radio {
     border: 1px solid #ededed;
-    margin-bottom: 70px;
+    margin-top: 46px;
+    margin-bottom: 97px;
+    padding: 22px 0 26px 88px;
   }
 
   .program-selection__list--checkbox {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 26px;
     padding-left: 60px;
+    padding-bottom: 22px;
   }
 
   .program-selection__list--radio li,
@@ -280,7 +304,11 @@
 
   .program-selection__list--checkbox li {
     width: 146px;
-    margin-right: 120px;
+    margin-bottom: 32px;
+  }
+
+  .program-selection__list--checkbox li:nth-child(2n+1) {
+    margin-right: 198px;
   }
 
   .program-selection__radio-input,
@@ -306,6 +334,8 @@
 
   .program-selection__textarea {
     min-height: 174px;
+    margin-top: 45px;
+    margin-bottom: 86px;
   }
 
   .program-selection__bottom-wrapper {
@@ -314,6 +344,10 @@
     align-items: center;
     padding: 0 42px 72px;
   }
+
+  .program-selection__note {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -321,7 +355,7 @@
     display: flex;
     justify-content: space-between;
     height: 196px;
-    margin-bottom: 30px;
+    margin-bottom: 91px;
   }
 
   .program-selection__main-wrapper fieldset {
@@ -330,7 +364,8 @@
 
   .program-selection__fill-note {
     width: 345px;
-    padding: 45px 0 38px;
+    padding: 35px 0 20px;
+    margin-bottom: 46px;
   }
 
   .program-selection__fieldset {
@@ -344,7 +379,11 @@
   .program-selection__input-wrapper {
     padding: 0;
     width: 570px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
+  }
+
+  .program-selection__input-wrapper label {
+    margin-right: 22px;
   }
 
   .program-selection__mail-icon {
@@ -360,17 +399,23 @@
   .program-selection__list--radio {
     box-sizing: border-box;
     height: 100%;
+    margin: 0;
     padding: 26px 0 0 87px;
   }
 
   .program-selection__list--checkbox {
     justify-content: space-between;
     padding-left: 0;
+    padding-bottom: 29px;
   }
 
   .program-selection__list--checkbox li {
     width: 245px;
     padding-left: 60px;
+    margin-right: 0;
+  }
+
+  .program-selection__list--checkbox li:nth-child(2n+1) {
     margin-right: 0;
   }
 
@@ -382,9 +427,14 @@
     left: 9px;
   }
 
+  .program-selection__textarea {
+    padding: 14px 15px 14px 18px;
+    margin-bottom: 88px;
+  }
+
   .program-selection__bottom-wrapper {
     display: flex;
     align-items: center;
-    padding: 0 0 80px;
+    padding: 0 0 82px;
   }
 }

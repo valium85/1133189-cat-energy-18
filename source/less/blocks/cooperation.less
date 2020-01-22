@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 13px 0;
+  padding: 12px 0 10px;
 }
 
 .cooperation__map-wrapper {
@@ -33,6 +33,10 @@
 }
 
 @media (max-width: @mobile-width-only) {
+  .cooperation__address p {
+    margin: 0;
+  }
+
   .cooperation__map {
     background-image: url("../img/bg-map-mobile@1x.png");
   }
@@ -55,6 +59,7 @@
   }
 
   .cooperation__map {
+    height: 396px;
     background-image: url("../img/bg-map-tablet@1x.png");
   }
 }

@@ -27,6 +27,14 @@
       background-image: url("../img/index-background-mobile@2x.jpg");
     }
   }
+
+  .first-screen .heading {
+    margin: 26px 0 12px;
+  }
+
+  .first-screen__slogan {
+    margin-bottom: 28px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -37,8 +45,6 @@
   .first-screen__wrapper {
     position: relative;
     display: block;
-    box-sizing: border-box;
-    min-height: 830px;
   }
 
   .first-screen .heading {
@@ -46,6 +52,7 @@
   }
 
   .first-screen__slogan {
+    margin-bottom: 21px;
     padding-left: 90px;
     .text-style(20px; 20px);
     color: #000000;
@@ -59,13 +66,14 @@
 @media (min-width: @desktop-width) {
   .first-screen {
     margin: 0 auto 80px;
-    background-image: url("../img/index-background-desktop@1x.jpg");
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-position: top right;
+    background:
+      url("../img/index-background-desktop@1x.jpg") no-repeat bottom right/ contain,
+      linear-gradient(to right, transparent 50%, #64a83b 50%) no-repeat bottom right/ auto;
 
     @media (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg");
+      background:
+        url("../img/index-background-desktop@2x.jpg") no-repeat bottom right/ contain,
+        linear-gradient(to right, transparent 50%, #64a83b 50%) no-repeat bottom right/ auto;
     }
   }
 
@@ -81,13 +89,28 @@
 
   .first-screen__slogan {
     padding-left: 0;
-    margin-bottom: 55px;
+    margin-bottom: 52px;
   }
 
   .first-screen__img {
     position: absolute;
     top: 142px;
-    right: 20%;/*пока примерно*/
+    right: 217px;
     width: 552px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .first-screen {
+    margin: 0 auto 80px;
+    background:
+      url("../img/index-background-desktop@1x.jpg") no-repeat bottom right/ 50% auto,
+      linear-gradient(to right, transparent 50%, #64a83b 50%) no-repeat bottom right/ auto;
+
+    @media (min-resolution: @retina-dppx) {
+      background:
+        url("../img/index-background-desktop@2x.jpg") no-repeat bottom right/ 50% auto,
+        linear-gradient(to right, transparent 50%, #64a83b 50%) no-repeat bottom right/ auto;
+    }
   }
 }

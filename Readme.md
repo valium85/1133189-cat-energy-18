@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Валерий Г](https://up.htmlacademy.ru/adaptive/18/user/1133189).
-* Наставник: [Михаил Савотиков](https://htmlacademy.ru/profile/id98316)
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena)
 
 ---
 

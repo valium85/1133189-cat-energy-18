@@ -9,14 +9,26 @@
   .container();
 }
 
+
+@media (max-width: @mobile-width-only) {
+  .wrapper-all--owners-data {
+    padding-top: 7px;
+    padding-bottom: 35px;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .wrapper-all--noflex {
     padding: 0 42px;
   }
 
+  .wrapper-all--fill-note {
+    .container();
+  }
+
   .wrapper-all--owners-data {
-    padding-top: 30px;
-    padding-bottom: 60px;
+    padding-top: 35px;
+    padding-bottom: 77px;
   }
 }
 
@@ -30,6 +42,6 @@
   }
 
   .wrapper-all--owners-data {
-    padding: 70px 0;
+    padding: 45px 0 69px;
   }
 }

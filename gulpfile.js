@@ -55,13 +55,13 @@ gulp.task("images", function () {
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("source/img/i1"));
+    .pipe(gulp.dest("source/img/optimized"));
 });
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img/i1"));
+    .pipe(gulp.dest("source/img/optimized"));
 });
 
 gulp.task("server", function () {
