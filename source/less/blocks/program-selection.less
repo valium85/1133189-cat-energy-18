@@ -140,6 +140,11 @@
   }
 }
 
+.program-selection__radio-input:focus + label {
+  outline: 2px solid lightblue;
+}
+
+
 .program-selection__checkbox-input:checked + label::after {
   content: "";
   position: absolute;
@@ -148,6 +153,10 @@
   width: 21px;
   height: 16px;
   background-image: url("../img/icon-tick.svg");
+}
+
+.program-selection__checkbox-input:focus + label {
+  outline: 2px solid lightblue;
 }
 
 .program-selection__textarea {
